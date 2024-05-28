@@ -4,7 +4,7 @@
 
 ## 簡介
 
-[C++ 簡介]([https://hackmd.io/@vincenttainan/CppNote01](https://github.com/Vincenttainan/CppTeachingNote/blob/main/01_introduce.md))
+[C++ 簡介](https://github.com/Vincenttainan/CppTeachingNote/blob/main/01_introduce.md)
 
 ---
 
