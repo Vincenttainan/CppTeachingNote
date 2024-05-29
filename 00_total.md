@@ -10,7 +10,7 @@
 
 ## 輸出
 
-[C++ 輸出](https://hackmd.io/@vincenttainan/CppNote02)
+[C++ 輸出](https://github.com/Vincenttainan/CppTeachingNote/blob/main/02_output.md)
 
 ---
 
