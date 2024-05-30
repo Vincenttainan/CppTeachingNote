@@ -16,7 +16,7 @@
 
 ## 變數與資料型態
 
-[變數與資料型態]([https://hackmd.io/@vincenttainan/ProgrammingNote03](https://github.com/Vincenttainan/CppTeachingNote/blob/main/03_variablesAndTypes.md))
+[變數與資料型態](https://github.com/Vincenttainan/CppTeachingNote/blob/main/03_variablesAndTypes.md)
 
 ---
 
