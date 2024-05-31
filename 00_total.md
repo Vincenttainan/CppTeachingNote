@@ -21,11 +21,15 @@
 ---
 
 ## 輸入  
-[C++ 輸入]  
+[C++ 輸入](https://github.com/Vincenttainan/CppTeachingNote/blob/main/04_input.md)  
 
 ---
 
+## 條件
 [condition]  
+
+---
+
 [loop]  
 [array]  
 [nested loop]  
