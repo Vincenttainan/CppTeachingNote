@@ -26,7 +26,7 @@
 ---
 
 ## 條件
-[condition]  
+[condition](https://github.com/Vincenttainan/CppTeachingNote/blob/main/05_condition.md)  
 
 ---
 
