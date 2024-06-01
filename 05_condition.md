@@ -186,6 +186,15 @@ else if(cindition_n){
     //do when condition_1 to condition_n-1 is not true but condition_n is true
 }
 else{
-    //do when all the condiiton above is not true
+    //do when all the conditions above are not true
 }
 ```
+
+## 快樂的練習時間
+
+[TOJ 94](https://toj.tfcis.org/oj/pro/94/)  
+[TOJ 95](https://toj.tfcis.org/oj/pro/95/)  
+[TOJ 96](https://toj.tfcis.org/oj/pro/96/)  
+[TOJ 97](https://toj.tfcis.org/oj/pro/97/)  
+[TOJ 99](https://toj.tfcis.org/oj/pro/99/)  
+[TOJ 102](https://toj.tfcis.org/oj/pro/102/)  
