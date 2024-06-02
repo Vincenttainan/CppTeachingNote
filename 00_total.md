@@ -25,8 +25,14 @@
 
 ---
 
+## 四則運算與運算式
+
+[arithmeticOperations]()
+
+---
+
 ## 條件
-[condition](https://github.com/Vincenttainan/CppTeachingNote/blob/main/05_condition.md)  
+[condition](https://github.com/Vincenttainan/CppTeachingNote/blob/main/06_condition.md)  
 
 ---
 
