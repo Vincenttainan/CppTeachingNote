@@ -27,7 +27,7 @@
 
 ## 四則運算與運算式
 
-[arithmeticOperations]()
+[arithmeticOperations](https://github.com/Vincenttainan/CppTeachingNote/blob/main/05_arithmeticOperations.md)
 
 ---
 
