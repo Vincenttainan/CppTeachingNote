@@ -4,39 +4,43 @@
 
 ## 簡介
 
-[C++ 簡介](https://github.com/Vincenttainan/CppTeachingNote/blob/main/01_introduce.md)
+[Introduce](https://github.com/Vincenttainan/CppTeachingNote/blob/main/01_introduce.md)
 
 ---
 
 ## 輸出
 
-[C++ 輸出](https://github.com/Vincenttainan/CppTeachingNote/blob/main/02_output.md)
+[Output](https://github.com/Vincenttainan/CppTeachingNote/blob/main/02_output.md)
 
 ---
 
 ## 變數與資料型態
 
-[變數與資料型態](https://github.com/Vincenttainan/CppTeachingNote/blob/main/03_variablesAndTypes.md)
+[VariablesAndTypes](https://github.com/Vincenttainan/CppTeachingNote/blob/main/03_variablesAndTypes.md)
 
 ---
 
 ## 輸入  
-[C++ 輸入](https://github.com/Vincenttainan/CppTeachingNote/blob/main/04_input.md)  
+[Input](https://github.com/Vincenttainan/CppTeachingNote/blob/main/04_input.md)  
 
 ---
 
 ## 四則運算與運算式
 
-[arithmeticOperations](https://github.com/Vincenttainan/CppTeachingNote/blob/main/05_arithmeticOperations.md)
+[ArithmeticOperations](https://github.com/Vincenttainan/CppTeachingNote/blob/main/05_arithmeticOperations.md)
 
 ---
 
 ## 條件
-[condition](https://github.com/Vincenttainan/CppTeachingNote/blob/main/06_condition.md)  
+[Condition](https://github.com/Vincenttainan/CppTeachingNote/blob/main/06_condition.md)  
 
 ---
 
-[loop]  
+## 迴圈
+[Loop]()  
+
+---
+
 [array]  
 [nested loop]  
 [nested array]  
