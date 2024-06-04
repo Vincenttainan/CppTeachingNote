@@ -203,3 +203,11 @@ $ans=\cfrac{-b\pm\sqrt{b^2-4ac}}{2a}$
 | --- | --- | --- |
 | **1** | 0 | 1 |
 | **0** | 1 | 0 |
+
+## 快樂的練習時間  
+
+[TOJ 124](https://toj.tfcis.org/oj/pro/124/)  
+[TOJ 236](https://toj.tfcis.org/oj/pro/236/)  
+[TOJ 237](https://toj.tfcis.org/oj/pro/237/)  
+[TOJ 330](https://toj.tfcis.org/oj/pro/330/)  
+[TOJ 341](https://toj.tfcis.org/oj/pro/341/)  
