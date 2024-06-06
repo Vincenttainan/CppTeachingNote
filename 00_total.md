@@ -37,11 +37,15 @@
 ---
 
 ## 迴圈
-[Loop]()  
+[Loop](https://github.com/Vincenttainan/CppTeachingNote/blob/main/07_loop.md)  
 
 ---
 
-[array]  
+## 陣列
+[Array]()  
+
+---
+
 [nested loop]  
 [nested array]  
 [function]  
