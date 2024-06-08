@@ -42,11 +42,15 @@
 ---
 
 ## 陣列
-[Array]()  
+[Array](https://github.com/Vincenttainan/CppTeachingNote/blob/main/08_array.md)  
 
 ---
 
-[nested loop]  
+## 巢狀迴圈
+[NestedLoop]()  
+
+---
+
 [nested array]  
 [function]  
 [custom function]  
