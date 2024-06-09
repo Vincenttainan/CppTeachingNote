@@ -47,7 +47,7 @@
 ---
 
 ## 巢狀迴圈
-[NestedLoop]()  
+[NestedLoop](https://github.com/Vincenttainan/CppTeachingNote/blob/main/09_nestedLoop.md)  
 
 ---
 
