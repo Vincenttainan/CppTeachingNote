@@ -32,26 +32,35 @@
 ---
 
 ## 條件
+
 [Condition](https://github.com/Vincenttainan/CppTeachingNote/blob/main/06_condition.md)  
 
 ---
 
 ## 迴圈
+
 [Loop](https://github.com/Vincenttainan/CppTeachingNote/blob/main/07_loop.md)  
 
 ---
 
 ## 陣列
+
 [Array](https://github.com/Vincenttainan/CppTeachingNote/blob/main/08_array.md)  
 
 ---
 
 ## 巢狀迴圈
+
 [NestedLoop](https://github.com/Vincenttainan/CppTeachingNote/blob/main/09_nestedLoop.md)  
 
 ---
 
-[nested array]  
+## 多維陣列
+
+[MultidimesionalArray](https://github.com/Vincenttainan/CppTeachingNote/blob/main/10_multidimesionalArray.md)  
+
+---
+
 [function]  
 [custom function]  
 [recursion]  
