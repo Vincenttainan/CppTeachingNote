@@ -61,8 +61,12 @@
 
 ---
 
-[function]  
-[custom function]  
+## 函式
+
+[Function](https://github.com/Vincenttainan/CppTeachingNote/blob/main/11_function.md)  
+
+---
+
 [recursion]  
 
 ---
