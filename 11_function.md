@@ -160,6 +160,63 @@ flowchart LR
 * 引用必須要有初始值，不能像變數一樣沒有
 * 引用的對象必須是變數
 
+## 補充
+
+有時候會用到 `a函式` 呼叫 `b函式` ， `b函式` 又呼叫 `a函式`  
+這時候如果用一般的寫法  
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int a(int x){
+    return b(x+1);
+}
+
+int b(int x){
+    return x*2;
+}
+
+int main(){
+    cout << a(1) << endl;
+}
+```
+他會說
+```cpp
+int a(int x){
+    return b(x+1);
+}
+```
+內的 `b(x+1)` 沒有被定義  
+
+所以應該要改成  
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int a(int x);
+int b(int x);
+
+int main(){
+    cout << a(1) << endl;
+}
+
+int a(int x){
+    return b(x+1);
+}
+
+int b(int x){
+    return x*2;
+}
+```
+
+先跟電腦說有兩個函示  
+
+然後在最後才補上他們的功能  
+
+這樣就可以正常執行了  
+
 ## 快樂的練習時間
 
 [TOJ 170](https://toj.tfcis.org/oj/pro/170/)  
