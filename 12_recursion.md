@@ -4,8 +4,8 @@
 遞迴，就是函式自己調用(invoke)自己  
 通常被用於解決能夠被分成相似小問題的問題  
 
-以最簡單的階乘為例
-$n!=n*(n-1)*(n-2)* \cdots * 1$
+以最簡單的階乘為例  
+$n!=n\times(n-1)\times(n-2)\times\cdots\times2\times1$  
 
 ```cpp
 long long factorial_loop(int n){
@@ -17,7 +17,7 @@ long long factorial_loop(int n){
     return result;
 }
 ```
-將階乘改寫成 $n!=n*(n-1)*(n-2)* \cdots * 1=n*(n-1)!$  
+將階乘改寫成 $n!=n\times(n-1)\times(n-2)\times\cdots\times2\times1=n\times(n-1)!$  
 這樣就可以變成遞迴式了，但是如果不設下停止條件，它會無限遞迴下去  
 按照階乘的定義 $n=1, 1!=1$  
 
