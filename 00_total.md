@@ -40,8 +40,9 @@
 
 ---
 
-#算法  
-* [Time Complexity]()  
+# 算法  
+## 時間複雜度  
+* [Time Complexity](https://github.com/Vincenttainan/CppTeachingNote/blob/main/13_timeComplexity.md)  
 * [Space Complexity]()
 * [Standard Template Library]()  
 * [Greedy]()
