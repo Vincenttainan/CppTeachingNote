@@ -120,6 +120,14 @@ int main(){
 > 第二個迴圈跑了 $2^n$ 次，每次花 $O(n)$ 檢驗  
 > 所以總複雜度是 $O(2^n \times n)$  
 
-這是一掌簡單的圖表  
-<img width="525" alt="截圖 2024-06-17 下午3 30 20" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/c0110f19-e071-4ccb-89e6-d5ce1a8472b1">
+這是一張簡單的圖表  
+顯示了各個複雜度在大數時的狀態  
+<img width="525" alt="截圖 2024-06-17 下午3 30 20" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/c0110f19-e071-4ccb-89e6-d5ce1a8472b1">  
+
+同理 空間複雜度 就是把關注的點  
+從時間改為空間罷了  
+
+## 小結  
+學時間、空間複雜度可以幫助去評估一個程式碼效率等等  
+~~雖然說不會的話好像也沒什麼影響就是了~~  
 
