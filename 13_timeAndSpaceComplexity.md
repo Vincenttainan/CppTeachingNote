@@ -5,7 +5,7 @@
 我們想知道這個東西跟什麼相關  
 而那些又會怎麼影響這個東西  
 
-舉例來說：$f(x) = x$ 跟 $g(x) = x^{2}$：  
+舉例來說： $f(x) = x$ 跟 $g(x) = x^{2}$：  
 
 <img width="525" alt="截圖 2024-06-17 上午11 27 00" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/a6a8c67b-f5d0-4e2d-9322-c544a408280d">
 
@@ -18,7 +18,7 @@
 ## Big O Notation
 
 定義  
-> 對於兩個函數 $f(x)$,$g(x)$  
+> 對於兩個函數 $f(x)$ , $g(x)$  
 如果能找到一個正實數 $k$ 及某個正實數 $x_0$  
 使得對於所有 $x \geq x_0$ 都有 $f(x) \leq k \times g(x)$  
 我們就說 $f(x) \in O(g(x))$ 或 $f(x) = O(g(x))$  
