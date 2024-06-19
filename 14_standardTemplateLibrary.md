@@ -85,15 +85,15 @@ $size + size + \frac{1}{2} \cdot size + \frac{1}{4} \cdot size \cdots \leq 3 \cd
 
 至於刪除跟中間插入就是直接暴力了  
 
-`v.push_back(k)`：把元素 `k` 加到 `v` 的尾巴，必要時會進行記憶體配置  
-`v.pop_back()`：移除 `v` 尾巴的元素  
-`v.insert(iter, k)`：在 `iter` 位置插入元素 `k`  
-`v.erase(iter)`：移除`iter`位置元素  
-`v.erase(star, end)`：移除某一段範圍的元素  
-`v.clear()`：清空容器 `v` 裡所有元素  
-`v.size()`：回傳目前容器 `v` 的長度  
-`v.empty()`：回傳容器 `v` 是否為空  
-`v[i]`：隨機存取容器 `v` 索引值為 `i` 的元素，跟陣列一樣索引值從 0 開始  
+* `v.push_back(k)`：把元素 `k` 加到 `v` 的尾巴，必要時會進行記憶體配置  
+* `v.pop_back()`：移除 `v` 尾巴的元素  
+* `v.insert(iter, k)`：在 `iter` 位置插入元素 `k`  
+* `v.erase(iter)`：移除`iter`位置元素  
+* `v.erase(star, end)`：移除某一段範圍的元素  
+* `v.clear()`：清空容器 `v` 裡所有元素  
+* `v.size()`：回傳目前容器 `v` 的長度  
+* `v.empty()`：回傳容器 `v` 是否為空  
+* `v[i]`：隨機存取容器 `v` 索引值為 `i` 的元素，跟陣列一樣索引值從 0 開始  
 
 ```cpp
 vector<int> v={1, 2, 3};
