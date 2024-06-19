@@ -60,3 +60,57 @@ vector<int> v;
 auto iter=v.begin();
 ...
 ```
+
+---
+
+## 2. vector
+
+vector 是一個可以動態變動大小的陣列  
+支援隨機存取  
+在陣列尾端新增、刪除 $O(1)$  
+任意插入、刪除 $O(size)$  
+交換兩個內容 $O(1)$  
+
+vector 的原理相當簡單：  
+`一開始空間是 1，當不夠用了就要一塊 2 倍大小的空間然後全部搬過去`  
+
+大概就是下圖這樣  
+
+<img width="843" alt="截圖 2024-06-19 上午11 51 56" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/d647c5ef-6e7e-4d27-b71a-b9bd83a89ed8">  
+
+這樣整體來講只要 $O(size)$ 就能完成所有在尾端加入的工作，均攤一個元素是 $O(1)$  
+
+原因是總共的成本最多是  
+$size + size + \frac{1}{2} \cdot size + \frac{1}{4} \cdot size \cdots \leq 3 \cdot size = O(size)$  
+
+至於刪除跟中間插入就是直接暴力了  
+
+`v.push_back(k)`：把元素 `k` 加到 `v` 的尾巴，必要時會進行記憶體配置  
+`v.pop_back()`：移除 `v` 尾巴的元素  
+`v.insert(iter, k)`：在 `iter` 位置插入元素 `k`  
+`v.erase(iter)`：移除`iter`位置元素  
+`v.erase(star, end)`：移除某一段範圍的元素  
+`v.clear()`：清空容器 `v` 裡所有元素  
+`v.size()`：回傳目前容器 `v` 的長度  
+`v.empty()`：回傳容器 `v` 是否為空  
+`v[i]`：隨機存取容器 `v` 索引值為 `i` 的元素，跟陣列一樣索引值從 0 開始  
+
+```cpp
+vector<int> v={1, 2, 3};
+                        // 1, 2, 3
+v.push_back(4);
+                        // 1, 2, 3, 4
+auto iter=v.begin();
+v.insert(iter+2,999);
+                        // 1, 2, 999, 3, 4
+v.pop_back();
+                        // 1, 2, 999, 3
+v.erase(iter);
+                        // 2, 999 ,3
+cout<<v.size()<<endl;   // output:3
+cout<<v.empty()<<endl;  // output:0
+v.erase(iter,iter+2);
+                        // 3
+v.clear();
+                        // 
+```
