@@ -74,7 +74,7 @@ vector 是一個可以動態變動大小的陣列
 vector 的原理相當簡單：  
 `一開始空間是 1，當不夠用了就要一塊 2 倍大小的空間然後全部搬過去`  
 
-<img width="843" alt="截圖 2024-06-20 上午9 45 26" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/588dabf0-89b3-4712-bd74-889f101522cf">
+<img width="843" alt="截圖 2024-06-20 上午9 45 26" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/588dabf0-89b3-4712-bd74-889f101522cf">  
 
 所需時間大概就是下圖這樣  
 
@@ -161,6 +161,8 @@ stack 可以算是簡省版的 vector
 * `st.push(k)`：將元素 `k` 加到堆疊 `st` 的最上面  
 * `st.top()`：查看堆疊 `st` 最上面的元素  
 * `st.pop()`：將堆疊 `st` 最上面的元素丟棄  
+
+<img width="346" alt="截圖 2024-06-20 上午9 59 29" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/2dab2719-3a17-4590-ab52-ed8312829571">  
 
 stack 功用很容易被取代，而且還有帶 deque 的常數  
 所以很多人都使用 vector 來取代 stack  
