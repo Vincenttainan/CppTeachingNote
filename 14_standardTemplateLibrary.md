@@ -118,5 +118,34 @@ v.clear();
 基本上，vector 已經可以當基本的陣列用了，還有更多的功能  
 但是缺點是 vector 有些狀況下存取會比普通陣列慢，新增元素常數也稍大，需要稍微小心  
 
+---
+
+## 3. deque
+
+vector 既然能支援從尾端插入跟刪除，那前端有辦法也支援嗎？  
+答案是可以的，這就是 deque 在做的事，他的全名是`double-ended-queue`  
+就是一個隊伍，而前面跟後面都可以插入跟刪除  
+大致上使用與 vector 差不多  
+
+跟 vector 相同的部分：  
+* `dq.push_back(k)`：把元素 `k` 加到 `dq` 的尾巴，必要時會進行記憶體配置  
+* `dq.pop_back()`：移除 `dq` 尾巴的元素  
+* `dq.insert(iter, k)`：在 `iter` 位置插入元素 `k`  
+* `dq.erase(iter)`：移除`iter`位置元素  
+* `dq.erase(star, end)`：移除某一段範圍的元素  
+* `dq.clear()`：清空容器 `dq` 裡所有元素  
+* `dq.size()`：回傳目前容器 `dq` 的長度  
+* `dq.empty()`：回傳容器 `dq` 是否為空  
+* `dq[i]`：隨機存取容器 `dq` 索引值為 `i` 的元素，跟陣列一樣索引值從 0 開始  
+
+跟 vector 不同的部分：  
+* `dq.push_front(k)`：把元素 `k` 加到 `dq` 的頭，必要時會進行記憶體配置  
+* `dq.pop_front()`：移除 `dq` 頭的元素  
+
+deque 基本上就是功能很齊全的陣列了  
+但是缺點是 deque 的常數約略是 vector 的至少 2 到 3 倍  
+在同樣情況下運行時間可能會較慢  
+
+
 
 
