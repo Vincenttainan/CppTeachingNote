@@ -162,9 +162,29 @@ stack 可以算是簡省版的 vector
 * `st.top()`：查看堆疊 `st` 最上面的元素  
 * `st.pop()`：將堆疊 `st` 最上面的元素丟棄  
 
-<img width="346" alt="截圖 2024-06-20 上午9 59 29" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/2dab2719-3a17-4590-ab52-ed8312829571">  
+<img width="345" alt="截圖 2024-06-20 上午9 59 29" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/2dab2719-3a17-4590-ab52-ed8312829571">  
 
 stack 功用很容易被取代，而且還有帶 deque 的常數  
 所以很多人都使用 vector 來取代 stack  
+
+---
+
+## 5. queue
+
+queue 就是一半的 deque  
+就像一堆人排成一列一樣，前面的人離開後，才輪到後面的人離開  
+
+他只能看跟拿走最上面那個  
+或者是放一個新的在後面，中間的不能隨機存取  
+
+* `q.push(k)`：將元素 `k` 加到佇列 `q` 的尾巴  
+* `q.front()`：查看佇列 `q` 最前面的元素  
+* `q.pop()`：將佇列 `q` 最前面的元素丟棄  
+
+<img width="345" alt="queue" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/9a95a453-8cae-45fb-b226-02eeedb0283f">  
+
+
+
+
 
 
