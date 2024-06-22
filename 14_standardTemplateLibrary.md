@@ -11,9 +11,9 @@ STL 提供了很多方便的容器跟算法，可以省下很多時間
 3. deque  
 4. stack  
 5. queue  
-6. array  
+6. priority_queue  
 7. bitset  
-8. priority_queue  
+8. array  
 9. set/map  
 10. unordered_set/map  
 11. pair/tuple  
