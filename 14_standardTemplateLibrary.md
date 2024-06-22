@@ -175,9 +175,6 @@ stack 可以算是簡省版的 vector
 
 <img width="345" alt="截圖 2024-06-20 上午9 59 29" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/2dab2719-3a17-4590-ab52-ed8312829571">  
 
-stack 功用很容易被取代，而且還有帶 deque 的常數  
-所以很多人都使用 vector 來取代 stack  
-
 ```cpp
 stack<int> st;
 st.push(1);
@@ -187,6 +184,9 @@ st.push(2);
 st.pop();
 // 1
 ```
+
+stack 功用很容易被取代，而且還有帶 deque 的常數  
+所以很多人都使用 vector 來取代 stack  
 
 ---
 
