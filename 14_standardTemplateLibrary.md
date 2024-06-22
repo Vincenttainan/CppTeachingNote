@@ -178,6 +178,16 @@ stack 可以算是簡省版的 vector
 stack 功用很容易被取代，而且還有帶 deque 的常數  
 所以很多人都使用 vector 來取代 stack  
 
+```cpp
+stack<int> st;
+st.push(1);
+// 1
+st.push(2);
+// 1, 2
+st.pop();
+// 1
+```
+
 ---
 
 ## 5. queue
