@@ -180,6 +180,7 @@ stack<int> st;
 st.push(1);
 // 1
 st.push(2);
+// st.top()==2
 // 1, 2
 st.pop();
 // 1
@@ -204,7 +205,18 @@ queue 就是一半的 deque
 
 <img width="345" alt="queue" src="https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/9a95a453-8cae-45fb-b226-02eeedb0283f">  
 
+```cpp
+queue<int> q;
+q.push(1);
+// 1
+q.push(2);
+// 1, 2
+// q.front()==1
+q.pop();
+// 2
+```  
 
+queue 取代性較低，很多場合還是會用到  
 
 
 
