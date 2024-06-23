@@ -275,3 +275,50 @@ cab -->|No|caa{1}
 可以發現這樣永遠會讓原本的三個條件都滿足  
 
 
+```mermaid
+flowchart TD
+a[6] --> aa[4]
+a --> ab[5]
+aa --> aaa[1]
+aa --> aab[3]
+ab --> aba[2]
+ab <-->|Bigger, Swap|abb{7}
+
+b[6] --> ba[4]
+b <-->|Bigger, Swap|bb{7}
+ba --> baa[1]
+ba --> bab[3]
+bb --> bba[2]
+bb --> bbb[5]
+
+c{7} --> ca[4]
+c --> cb[6]
+ca --> caa[1]
+ca --> cab[3]
+cb --> cba[2]
+cb --> cbb[5]
+```
+
+每層的點都可以容納上一層的 $2$ 倍，所以 L 層可以容納 $O(2L)$ 個點  
+換句話說 $O(N)$ 個點只有 $O(log N)$ 層  
+剛剛的操作每次就會讓高度改變 $1$，所以是 $O(log N)$  
+
+* `pq.push(k)`：將元素 `k` 加到優先佇列 `pq` 裡面  
+* `pq.top()`：查看優先佇列 `pq` 中最大的元素  
+* `pq.pop()`：將優先佇列 `pq` 中最大的元素丟棄  
+
+```cpp
+priority_queue<int> pq;
+pq.push(5);
+// {5}
+pq.push(4);
+// {5, 4}
+pq.push(6);
+// {5, 4, 6}
+// pq.top()==max{5, 4, 6}==6
+pq.pop();
+// {5, 4}
+// pq.top()==max{5, 4}==5
+```
+
+priority_queue 超級實用也超級重要，是不可或缺的 STL 之一  
