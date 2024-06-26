@@ -179,6 +179,17 @@ deque 基本上就是功能很齊全的陣列了
 
 ## 4. stack  
 
+stack 完整宣告應該長得像這樣  
+```cpp
+stack<_Tp, _Sequence =deque<_Tp>>;
+```
+* _Tp 是裡面要裝什麼東西  
+* _Sequence 則是我們要用什麼東西裝，預設是 deque，但你可以發現其實 vector 也可以做一樣的是，所以也可以像是  
+```cpp
+stack<int, vector<int>> st;
+```
+這樣常數會比較小  
+
 stack 可以算是簡省版的 vector  
 也可以看成一堆的東西，但為了怕弄倒所以只能拿最上面那個  
 
