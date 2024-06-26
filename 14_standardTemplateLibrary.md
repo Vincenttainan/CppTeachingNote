@@ -545,7 +545,51 @@ for(const auto &i : st) {
 
 對於預設的 Hash 而言，甚至有的比賽會特別構造測資讓他變成每次操作 $O(N)$  
 
+---
 
+## 11. pair / tuple
+
+假如我們今天想要存點 $(x, y)$ ，那我們就需要把兩個綁起來一起做事  
+
+pair 就給了我們這個功能，而如果要綁 $3$ 個以上就可以用tuple  
+
+### pair：
+* `make_pair(a, b)`：將 `a` 和 `b` 兩個元素組成一個pair  
+* `p.first`：取得 `p` 內的第一個元素  
+* `p.second`：取的 `p` 內的第二個元素  
+
+```cpp
+pair<int, char> p;
+p=make_pair(1, 'a');
+// {1, 'a'}
+cout << p.fisrt << " " << p.second << endl;
+// 1 a
+```
+
+### tuple：
+* `make_tuple(a, b, c (...))`：將 `a` , `b` 和 `c` 三個或以上的元素組成一個tuple  
+* `get<n>(t)`：取的 `t` 內的第 `n` 個元素  
+
+```cpp
+tuple<int, char, bool> t;
+t=make_tuple(1, 'a', false);
+// {1, 'a', false}
+cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) <<endl;
+// 1 a 0
+```
+
+多多用pair跟tuple它可以提升很多寫程式的效率  
+
+偷偷放一個我還不會用tuple的時候的做法  
+```cpp
+pair< pair<int,int> , int> p;
+p=make_pair(make_pair(1,2),3)
+/* also
+p.first.first=1;
+p.first.second=2;
+p.second=3;
+*/
+```
 
 
 
