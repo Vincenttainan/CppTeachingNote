@@ -256,6 +256,18 @@ queue 取代性較低，很多場合還是會用到
 
 ## 6. priority_queue  
 
+priority_queue 完整宣告應該長得像這樣  
+```cpp
+priority_queue<_Tp, _Sequence = vector<_Tp>,
+    _Compare = less<typename _Sequence::value_type>>;
+```
+* _Tp 是裡面要裝什麼東西
+* _Sequence 則是我們要用什麼東西裝，預設是 vector
+* _Compare 則是我們要怎麼比較
+  * less<_Tp> 表示**越大**在越上面
+  * greater<_Tp> 表示**越小**在越上面
+  * 含有 bool operator()(_Tp, _Tp) 的 struct/class自定義排序，**比較的東西回傳 True 表示要把他往下換**
+
 優先佇列，也就是有優先級的 queue  
 
 假設你現在有很多題目要寫，有些會給你快樂，有些只會讓你抱怨連連  
