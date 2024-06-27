@@ -373,6 +373,13 @@ priority_queue 超級實用也超級重要，是不可或缺的 STL 之一
 
 ## 7. array
 
+array 完整宣告應該長得像這樣  
+```cpp
+array<_Tp, _Nm>;
+```
+* _Tp 是裡面要裝什麼東西  
+* _Nm 則是大小  
+
 array 就是陣列  
 
 ```cpp
