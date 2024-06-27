@@ -425,6 +425,29 @@ bitset 的好處是他可以做大量批次的位元操作，會省下 32 或 64
 
 ## 9. set / map
 
+set/multiset 完整宣告應該長得像這樣  
+```cpp
+(multi)set<_Key, _Compare = less<_Key>,
+    typename _Alloc = allocator<_Key>>;
+```
+* _Key 是裡面要裝什麼東西  
+* _Compare 則是我們要怎麼比較，語法跟 priority_queue 一樣，但是邏輯是跟 sort 做一樣的事  
+  * less<_Tp> 表示**越大**在越上面
+  * greater<_Tp> 表示**越小**在越上面
+  * 含有 bool operator()(_Tp, _Tp) 的 struct/class自定義排序，**比較的東西回傳 True 表示要把他往下換**
+
+map 完整宣告應該長得像這樣  
+```cpp
+(multi)map<_Key, _Tp, _Compare = less<_Key>,
+    typename _Alloc = allocator<_Key>>;
+```
+* _Key 是裡面要裝什麼東西
+* _Tp 是裡面每個值附帶的是什麼東西
+* _Compare 則是我們要怎麼比較，語法跟 set 一樣
+  * less<_Tp> 表示**越大**在越上面
+  * greater<_Tp> 表示**越小**在越上面
+  * 含有 bool operator()(_Tp, _Tp) 的 struct/class自定義排序，**比較的東西回傳 True 表示要把他往下換**
+
 set 可以維護一堆數字，當插入重複的時候會忽略  
 可以刪除，可以尋找某個數字有沒有出現過，而且有自排序功能  
 
