@@ -220,6 +220,13 @@ stack 功用很容易被取代，而且還有帶 deque 的常數
 
 ## 5. queue
 
+queue 完整宣告應該長得像這樣  
+```cpp
+queue<_Tp, _Sequence = deque<_Tp>>;
+```
+* _Tp 是裡面要裝什麼東西  
+* _Sequence 則是我們要用什麼東西裝，預設是 deque，但這次 vector 就沒辦法做這件事了，就乖乖用 deque 吧  
+
 queue 就是一半的 deque  
 就像一堆人排成一列一樣，前面的人離開後，才輪到後面的人離開  
 
