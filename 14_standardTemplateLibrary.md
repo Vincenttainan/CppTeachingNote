@@ -575,6 +575,15 @@ map 也有 multi 版本，然而過於混亂跟難用
 
 ## 10. unordered_set / map
 
+unordered_set/multiset 完整宣告應該長得像這樣  
+```cpp
+unordered_(multi)set<_Value, _Hash = hash<_Value>,
+    _Pred = equal_to<_Value>, _Alloc = allocator<_Value>>>
+```
+* _Value 是裡面要裝什麼東西
+* _Hash 則是我們要怎麼 hash，可以用預設的或者自己寫，需要一個 struct/class 裡面有回傳數字的 operator()(_Value)
+* _Pred 則是用來判斷相等的 struct/class
+
 set 的大部分操作都需要 $O(log N)$  
 
 但是 C++ STL 有提供一個 **期望** 是 $O(1)$ 查詢、刪除的儲存結
