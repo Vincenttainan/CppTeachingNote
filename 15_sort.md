@@ -24,7 +24,7 @@
 
 ### 圖示：  
 
-![bubble](https://hackmd.io/_uploads/Sk6VnqsIR.gif)
+![bubble](https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/6225726d-cdd1-4f86-be87-8fc950836f68)
 
 ### 說明：  
 
@@ -55,7 +55,7 @@ for(int i=0; i<n-1; i++){
 
 ### 圖示：  
 
-![selection](https://hackmd.io/_uploads/r1GlOsj8R.gif)
+![selection](https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/60ee0660-48d2-4972-abd1-c64c1d6f6a13)
 
 ### 說明：  
 
@@ -88,7 +88,7 @@ for(int i=0; i<n; i++){
 
 ### 圖示：  
 
-![insertion](https://hackmd.io/_uploads/BJef5J6LC.gif)
+![insertion](https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/2f780460-ed3d-4408-b02d-5daa5e1586eb)
 
 ### 說明：  
 
@@ -131,7 +131,7 @@ for(i=1; i<n; i++){
 
 ### 圖示：  
 
-![quick](https://hackmd.io/_uploads/SJeBxxp8A.gif)
+![quick](https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/2b134080-dd55-4704-9ba4-76e00b02edd2)
 
 ### 說明：  
 
