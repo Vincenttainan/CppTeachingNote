@@ -161,3 +161,95 @@ void quickSort(int arr[], int low, int high) {
 }
 
 ```
+
+---
+
+## 4. 合併排序 Merge Sort  
+
+### 時間複雜度： $O(n log n)$  
+
+### 想法：  
+
+一種基於分治法的排序演算法  
+
+將一個未排序的陣列分成若干個子陣列，直到每個子陣列只有一個元素，然後再逐步將這些子陣列合併成排序好的陣列  
+
+```mermaid
+flowchart TD;
+A[未排序的陣列] --> B1[未排序的左半部] & B2[未排序的右半部]
+B1 --> C1[未排序的元素1] & C2[未排序的元素2]
+B2 --> C3[未排序的元素3] & C4[未排序的元素4]
+C1 --> D1[合併排序元素1和元素2]
+C2 --> D1 --> E1[已排序的左半部]
+C3 --> D2[合併排序元素3和子元素4]
+C4 --> D2 --> E2[已排序的右半部]
+E1 --> F[合併排序左半部與右半部]
+E2 --> F
+F --> G[已排序的整個陣列]
+```
+
+### 圖示：  
+
+![merge](https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/124673b3-d872-4ad6-9de0-928daff2f3a0)  
+
+### 說明：  
+
+將未排序的陣列從中間分成兩個子陣列後，將這兩個子陣列再分別從中間分成更小的子陣列，重複直到每個子陣列只有一個元素為止  
+
+將相鄰的兩個子陣列進行合併，並使合併後的子陣列內部元素有序  
+
+重複此步驟，直到所有子陣列合併成一個完整的排序好的陣列  
+
+```cpp
+void mergeSort(vector<int>& arr, int left, int right){
+    if(left>=right){
+        return;
+    }
+
+    int mid=left+(right-left)/2;
+
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid + 1, right);
+
+    int n1=mid-left+1;
+    int n2=right-mid;
+
+    vector<int> leftArr(n1), rightArr(n2);
+
+    for(int i=0; i<n1;i++){
+        leftArr[i]=arr[left+i];
+    }
+    for(int j=0; j<n2; j++){
+        rightArr[j]=arr[mid+1+j];
+    }
+
+    int i=0;
+    int j=0;
+    int k=left;
+
+    while(i<n1&&j<n2){
+        if(leftArr[i]<=rightArr[j]){
+            arr[k]=leftArr[i];
+            i++;
+        }
+        else{
+            arr[k]=rightArr[j];
+            j++;
+        }
+        k++;
+    }
+
+    while(i<n1){
+        arr[k]=leftArr[i];
+        i++;
+        k++;
+    }
+
+    while(j<n2){
+        arr[k]=rightArr[j];
+        j++;
+        k++;
+    }
+}
+
+```
