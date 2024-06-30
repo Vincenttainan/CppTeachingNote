@@ -164,7 +164,7 @@ void quickSort(int arr[], int low, int high) {
 
 ---
 
-## 4. 合併排序 Merge Sort  
+## 5. 合併排序 Merge Sort  
 
 ### 時間複雜度： $O(n log n)$  
 
