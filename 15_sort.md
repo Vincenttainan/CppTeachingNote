@@ -253,3 +253,159 @@ void mergeSort(vector<int>& arr, int left, int right){
 }
 
 ```
+
+---
+
+## 6. 堆積排序 Heap Sort  
+
+### 時間複雜度： $O(n log n)$  
+
+### 想法：  
+
+Heap Sort是一種基於比較的排序演算法。它利用堆積資料結構（Heap）來幫助實現排序  
+
+首先將資料構建成一棵完全二元樹，且每個節點的值都大於或等於其子節點的值  
+
+拔除最大值後，重新生成一棵完全二元樹，重複此步驟直到所有資料完成排序  
+
+```mermaid
+flowchart 
+A[開始] --> B[建立最大堆]
+B --> C[從最後一個非葉節點開始]
+C --> D[呼叫heapify進行堆化]
+D --> E[完成建立最大堆]
+E --> F[將根節點與最後一個節點交換]
+F --> G[重新堆化剩餘節點]
+G --> H{剩餘節點大於1嗎？}
+H -->|是| F
+H -->|否| I[結束]
+
+subgraph heapify
+    D1[初始化largest為根節點]
+    D1 --> D2[計算左子節點和右子節點索引]
+    D2 --> D3[如果左子節點存在且比根節點大，更新largest]
+    D3 --> D4[如果右子節點存在且比largest大，更新largest]
+    D4 --> D5{largest是否更新？}
+    D5 -->|是| D6[交換根節點和largest]
+    D6 --> D7[遞迴呼叫heapify]
+    D5 -->|否| D8[結束]
+end
+
+D --> D1
+
+```
+
+### 圖示：  
+
+```mermaid
+graph TD
+    A[未排序的陣列: 4, 10, 3, 5, 1]
+
+    A --> B1[建立最大堆]
+    B1 --> B2[10]
+    B1 --> B3[5, 3]
+    B2 --> B4[5]
+    B2 --> B5[1]
+    B4 --> B6[4]
+    B4 --> B7[3]
+    B5 --> B8[1]
+
+    B1 --> C1[交換根節點和最後一個節點]
+    C1 --> C2[1]
+    C1 --> C3[5, 3, 4]
+    C2 --> C4[5]
+    C2 --> C5[1]
+    C4 --> C6[4]
+    C4 --> C7[3]
+    C5 --> C8[1]
+
+    C1 --> D1[重新堆化剩餘陣列]
+    D1 --> D2[5]
+    D1 --> D3[4, 3]
+    D2 --> D4[4]
+    D2 --> D5[1]
+    D4 --> D6[1]
+    D4 --> D7[3]
+
+    D1 --> E1[交換根節點和倒數第二個節點]
+    E1 --> E2[1]
+    E1 --> E3[4, 3]
+    E2 --> E4[4]
+    E2 --> E5[1]
+    E4 --> E6[1]
+    E4 --> E7[3]
+
+    E1 --> F1[重新堆化剩餘陣列]
+    F1 --> F2[4]
+    F1 --> F3[3, 1]
+    F2 --> F4[3]
+    F2 --> F5[1]
+    F4 --> F6[1]
+    F4 --> F7[3]
+
+    F1 --> G1[交換根節點和倒數第三個節點]
+    G1 --> G2[1]
+    G1 --> G3[3, 1]
+    G2 --> G4[3]
+    G2 --> G5[1]
+    G4 --> G6[1]
+    G4 --> G7[3]
+
+    G1 --> H1[重新堆化剩餘陣列]
+    H1 --> H2[3]
+    H1 --> H3[1, 1]
+    H2 --> H4[1]
+    H2 --> H5[1]
+    H4 --> H6[1]
+    H4 --> H7[1]
+
+    H1 --> I1[最終排序結果]
+    I1 --> I2[1, 3, 4, 5, 10]
+
+
+```
+
+### 說明：  
+
+使用迴圈從最後一個非葉子節點開始建成max heap  
+
+將max heap的根（最大值）與堆的最後一個元素交換  
+
+將剩餘的元素重新構建成max heap  
+
+重複上述步驟，直到堆的大小縮小為1  
+
+```cpp
+void heapSort(vector<int>& arr){
+    int n=arr.size();
+
+    auto heapify=[&](int n, int i){
+        int largest=i;
+        int left=2*i+1;
+        int right=2*i+2;
+
+        if(left<n&&arr[left]>arr[largest]){
+            largest=left;
+        }
+
+        if(right<n&&arr[right]>arr[largest]){
+            largest=right;
+        }
+
+        if(largest!=i){
+            swap(arr[i], arr[largest]);
+            heapify(n, largest);
+        }
+    };
+
+    for(int i=n/2-1; i>=0; i--){
+        heapify(n, i);
+    }
+
+    for(int i=n-1; i>0; i--){
+        swap(arr[0], arr[i]);
+        heapify(i, 0);
+    }
+}
+```
+
