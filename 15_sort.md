@@ -8,7 +8,8 @@
 * 插入排序 Insertion Sort  
 * 快速排序 Quick Sort  
 * 合併排序 Merge Sort  
-* 堆積排序 Heap Sort  
+* 堆積排序 Heap Sort
+* e.x. Bogo Sort
 
 等等  
 
@@ -409,3 +410,43 @@ void heapSort(vector<int>& arr){
 }
 ```
 
+---
+
+## E.X. Bogo Sort
+
+### 時間複雜度： 
+平均情況： $O(n \cdot n!)$  
+最壞情況： $O(\infty)$
+
+### 想法：  
+
+一種靠陽壽的排序方式，每次將數據**隨機**排列後，檢查數據是否已經排序完成，若未排序完成則再次將數據**隨機**排列  
+
+放這個排序方式只是因為他的想法十分有趣，在實際的應用上基本上沒有任何實際用途  
+
+### 圖示：  
+
+![bogo](https://github.com/Vincenttainan/CppTeachingNote/assets/54768760/37f17f4d-31a6-409d-acf6-e8afbf63897b)
+
+### 說明：  
+
+`isSorted()` 函式用來檢查陣列是否已經排序  
+`bogoSort()` 函式則不斷隨機排列陣列直到陣列排序完成  
+
+```cpp
+bool isSorted(const vector<int>& arr){
+    for(size_t i=1; i<arr.size(); i++){
+        if(arr[i]<arr[i-1]){
+            return false;
+        }
+    }
+    return true;
+}
+
+void bogoSort(vector<int>& arr){
+    while(!isSorted(arr)){
+        random_shuffle(arr.begin(), arr.end());
+    }
+}
+
+```
