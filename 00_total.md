@@ -42,16 +42,18 @@
 
 # 算法  
 ## 時間複雜度  
-* [Time / Space Complexity](https://github.com/Vincenttainan/CppTeachingNote/blob/main/13_timeAndSpaceComplexity.md)
+* [Time / Space Complexity](https://github.com/Vincenttainan/CppTeachingNote/blob/main/13_timeAndSpaceComplexity.md)  
 
 ## STL  
-* [Standard Template Library](https://github.com/Vincenttainan/CppTeachingNote/blob/main/14_standardTemplateLibrary.md)
+* [Standard Template Library](https://github.com/Vincenttainan/CppTeachingNote/blob/main/14_standardTemplateLibrary.md)  
 
 ## 排序  
-* [Sort]()
-* [Greedy]()
+* [Sort](https://github.com/Vincenttainan/CppTeachingNote/blob/main/15_sort.md)
+
+
+* [Greedy]()  
 * [Dynamic Programming]()  
-* [Graph Theory]()
-* [Data Structure]()
-* [Tree]()
-* [Divide]()
+* [Graph Theory]()  
+* [Data Structure]()  
+* [Tree]()  
+* [Divide]()  
