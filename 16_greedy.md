@@ -349,12 +349,12 @@ $\{ C \cdots ^1 A \cdots ^2 B \cdots ^3 \}$
 如果我們定義 $S$ 跟 $T$ 兩個字串，我們想要說 $S < T$ 如果 $S + T$ 的字典序比 $T + S$ 小  
 想要讓 sort 要是好的，就要讓 $<$ 有它該有的樣子  
 
-* $S \ge S$
+* $S \ge S$  
 很顯然，因為 $S + S$ 跟 $S + S$ 的字典序是一樣的  
-* $U$ 也是字串，則 $S < U ; U < T \rightarrow S < T$
-我們把一個字串寫成數字的樣子，也就是說，如果字元集的大小是 $\Sigma$ ，定義 $S = S_1\Sigma^{|S|-1} + S_2\Sigma^{|S|-2} + \cdots + S_{|s|}\Sigma^{0}$
-這樣 $S + T$ 的字典序比 $T + S$ 小就表示
-$S \cdot \Sigma^{|T|} + T < T \cdot \Sigma^{|S|} + S$
+* $U$ 也是字串，則 $S < U ; U < T \rightarrow S < T$  
+我們把一個字串寫成數字的樣子，也就是說，如果字元集的大小是 $\Sigma$ ，定義 $S = S_1\Sigma^{|S|-1} + S_2\Sigma^{|S|-2} + \cdots + S_{|s|}\Sigma^{0}$  
+這樣 $S + T$ 的字典序比 $T + S$ 小就表示  
+$S \cdot \Sigma^{|T|} + T < T \cdot \Sigma^{|S|} + S$  
 移項得到 $\frac{S}{\Sigma^{|S|}-1} < \frac{T}{\Sigma^{|T|}-1}$ ，換句話說可以想成每個字串都可以用一個值去代表他，那顯然就會滿足遞移律了  
 
 也就是說，你可以把它當作一種 $<$ ，這樣 sort 是好的  
