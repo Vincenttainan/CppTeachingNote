@@ -50,8 +50,10 @@
 ## 排序  
 * [Sort](https://github.com/Vincenttainan/CppTeachingNote/blob/main/15_sort.md)
 
+## 貪婪法  
+* [Greedy](https://github.com/Vincenttainan/CppTeachingNote/blob/main/16_greedy.md)
 
-* [Greedy]()  
+
 * [Dynamic Programming]()  
 * [Graph Theory]()  
 * [Data Structure]()  
