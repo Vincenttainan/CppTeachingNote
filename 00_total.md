@@ -53,8 +53,10 @@
 ## 貪婪法  
 * [Greedy](https://github.com/Vincenttainan/CppTeachingNote/blob/main/16_greedy.md)
 
+## DP
+* [Dynamic Programming I](https://github.com/Vincenttainan/CppTeachingNote/blob/main/17_dpI.md)
+* [Dynamic Programming II](https://github.com/Vincenttainan/CppTeachingNote/blob/main/18_dpII.md)
 
-* [Dynamic Programming]()  
 * [Graph Theory]()  
 * [Data Structure]()  
 * [Tree]()  
