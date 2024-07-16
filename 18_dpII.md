@@ -94,7 +94,7 @@ $dp(i, j) = max \{ 放, 不放 \}$
 
 改成數學是其實就可以變成：  
 
-$\left[
+$$\left[
 \begin{array}{cc}
 f(n) & f(n-1) \\
 \end{array}
@@ -114,11 +114,11 @@ f(n)+f(n-1) & f(n)
 \begin{array}{cc}
 f(n+1) & f(n)
 \end{array}
-\right]$  
+\right]$$  
 
 又  
 
-$\left[
+$$\left[
 \begin{array}{cc}
 f(n+1) & f(n) \\
 \end{array}
@@ -138,11 +138,11 @@ f(n+1)+f(n) & f(n+1)
 \begin{array}{cc}
 f(n+2) & f(n+1)
 \end{array}
-\right]$  
+\right]$$  
 
 所以可以推論出  
 
-$\left[
+$$\left[
 \begin{array}{cc}
 f(n) & f(n-1) \\
 \end{array}
@@ -163,11 +163,11 @@ f(n) & f(n-1) \\
 \begin{array}{cc}
 f(n+2) & f(n+1)
 \end{array}
-\right]$  
+\right]$$  
 
 最後可得  
 
-$\left[
+$$\left[
 \begin{array}{cc}
 f(n) & f(n-1) \\
 \end{array}
@@ -182,7 +182,7 @@ f(n) & f(n-1) \\
 \begin{array}{cc}
 f(n+k) & f(n-1+k)
 \end{array}
-\right]$  
+\right]$$  
 
 
 
