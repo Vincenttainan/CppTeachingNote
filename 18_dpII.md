@@ -79,6 +79,111 @@ $dp(i, j) = max \{ 放, 不放 \}$
 所以最後我們可以發現  
 從 $dp(N, W )$ 開始遞迴下去，往轉移的來源走直到碰到基底  
 
+---
+
+### 矩陣轉移
+
+從之前的例題可以發現，大部分的 DP 再向下一層推算時  
+所需要的都只會是前幾層的數值  
+
+這時回想高中所教的矩陣，發現恰好可以應用在其上面  
+
+以費氏數列為例：  
+* $f(n)=f(n-1)+f(n-2)$  
+* $f(0)=1,f(1)=1$  
+
+改成數學是其實就可以變成：  
+
+$\left[
+\begin{array}{cc}
+f(n) & f(n-1) \\
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+1 & 1 \\
+1 & 0 \\
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+f(n)+f(n-1) & f(n)
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+f(n+1) & f(n)
+\end{array}
+\right]$  
+
+又  
+
+$\left[
+\begin{array}{cc}
+f(n+1) & f(n) \\
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+1 & 1 \\
+1 & 0 \\
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+f(n+1)+f(n) & f(n+1)
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+f(n+2) & f(n+1)
+\end{array}
+\right]$  
+
+所以可以推論出  
+
+$\left[
+\begin{array}{cc}
+f(n) & f(n-1) \\
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+1 & 1 \\
+1 & 0 \\
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+1 & 1 \\
+1 & 0 \\
+\end{array}
+\right]=
+\left[
+\begin{array}{cc}
+f(n+2) & f(n+1)
+\end{array}
+\right]$  
+
+最後可得  
+
+$\left[
+\begin{array}{cc}
+f(n) & f(n-1) \\
+\end{array}
+\right]
+\left[
+\begin{array}{cc}
+1 & 1 \\
+1 & 0 \\
+\end{array}
+\right]^k=
+\left[
+\begin{array}{cc}
+f(n+k) & f(n-1+k)
+\end{array}
+\right]$  
+
 
 
 
