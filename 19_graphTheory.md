@@ -63,7 +63,7 @@
 
 ### 有向圖  
 圖中都是有向邊  
-![截圖 2024-07-18 上午9.46.20](https://hackmd.io/_uploads/r1JbExIOR.png)  
+<img width="452" alt="截圖 2024-07-18 上午9 46 20" src="https://github.com/user-attachments/assets/c4f28b58-d261-458d-8ec8-23caaaa08234">  
 
 * 圖中沒有環 : 有向無環圖 (DAG)  
 * 圖中有環 : 有向圖  
@@ -72,23 +72,23 @@
 
 1. 簡單圖  
 不存在自環與重邊  
-![截圖 2024-07-18 上午9.51.11](https://hackmd.io/_uploads/B1S7Sg8_R.png)  
+<img width="452" alt="截圖 2024-07-18 上午9 51 11" src="https://github.com/user-attachments/assets/6f3d8246-d806-4a4f-9235-e34680ad32db">  
 
 2. 連通圖  
 圖中任兩點間都可以經由一些邊抵達  
-![截圖 2024-07-18 上午9.51.11](https://hackmd.io/_uploads/B1S7Sg8_R.png)  
+<img width="452" alt="截圖 2024-07-18 上午9 51 11" src="https://github.com/user-attachments/assets/6f3d8246-d806-4a4f-9235-e34680ad32db">  
 
 3. 樹 (tree)  
 一張沒有環且連通的圖  
-![截圖 2024-07-18 上午9.52.38](https://hackmd.io/_uploads/SJq_Hg8OR.png)  
+<img width="452" alt="截圖 2024-07-18 上午9 52 38" src="https://github.com/user-attachments/assets/89157f71-3427-4da6-a18b-3aec6502e521">  
 
 4. 完全圖  
 任兩點間都有一條邊  
-![截圖 2024-07-18 上午9.54.28](https://hackmd.io/_uploads/SJHkLxUO0.png)  
+<img width="452" alt="截圖 2024-07-18 上午9 54 28" src="https://github.com/user-attachments/assets/193f2a50-9f14-4cfd-935e-ab6bcfe5003e">  
 
 5. 二分圖
 可以將這張圖的頂點分為兩個集合  
 滿足所有邊的兩個頂點都在不同集合  
-![截圖 2024-07-18 上午9.57.23](https://hackmd.io/_uploads/Bk_9LgIOA.png)  
+<img width="452" alt="截圖 2024-07-18 上午9 57 23" src="https://github.com/user-attachments/assets/453b3f47-9cda-4776-879c-7450e1dadc5a">  
 
 
