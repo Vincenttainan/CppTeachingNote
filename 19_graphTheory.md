@@ -91,4 +91,39 @@
 滿足所有邊的兩個頂點都在不同集合  
 <img width="452" alt="截圖 2024-07-18 上午9 57 23" src="https://github.com/user-attachments/assets/453b3f47-9cda-4776-879c-7450e1dadc5a">  
 
+---
 
+## 存圖  
+~~Ctrl+S~~  
+
+* 鄰接矩陣  
+* 鄰接串列  
+
+### 鄰接矩陣  
+開 $V*V$ 的陣列， $G[u][v]$ 表示 $u , v$ 之間的 邊數 或 權重  
+空間複雜度 $V*V$  
+但可以 $O(1)$ 加邊刪邊  
+
+### 鄰接串列  
+開 $V$ 個 vector ，將第 $i$ 個點可以到達的點 push 進去第 $i$ 個 vector  
+<img width="708" alt="截圖 2024-07-18 上午10 07 28" src="https://github.com/user-attachments/assets/6a08ab30-c503-4b8d-8958-b2eca915a30b">  
+空間複雜度 $O(V+E)$  
+加邊時間複雜度 $O(1)$ , 刪邊時間複雜度 $O(V)$  
+如果有特別情況需要刪邊 可把 vector 改成 set  
+加邊時間複雜度 $O(logV)$ , 刪邊時間複雜度 $O(logV)$  
+
+### 實作  
+```cpp=
+int n,m;
+vector<int>G[N];
+
+int main(){
+	cin>>n>>m;
+	for (int i=1;i<=m;i++){
+		int u,v; cin>>u>>v;
+		G[u].push_back(v);
+		G[v].push_back(u);
+	}
+	return 0;
+}
+```
