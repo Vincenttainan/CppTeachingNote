@@ -55,4 +55,40 @@
 9. 連通 (connected)  
 若 $u , v$ 之間有一條路徑則為連通  
 
+---
+
+## 圖的類型  
+
+主要分為有向圖與無向圖  
+
+### 有向圖  
+圖中都是有向邊  
+![截圖 2024-07-18 上午9.46.20](https://hackmd.io/_uploads/r1JbExIOR.png)  
+
+* 圖中沒有環 : 有向無環圖 (DAG)  
+* 圖中有環 : 有向圖  
+
+### 無向圖  
+
+1. 簡單圖  
+不存在自環與重邊  
+![截圖 2024-07-18 上午9.51.11](https://hackmd.io/_uploads/B1S7Sg8_R.png)  
+
+2. 連通圖  
+圖中任兩點間都可以經由一些邊抵達  
+![截圖 2024-07-18 上午9.51.11](https://hackmd.io/_uploads/B1S7Sg8_R.png)  
+
+3. 樹 (tree)  
+一張沒有環且連通的圖  
+![截圖 2024-07-18 上午9.52.38](https://hackmd.io/_uploads/SJq_Hg8OR.png)  
+
+4. 完全圖  
+任兩點間都有一條邊  
+![截圖 2024-07-18 上午9.54.28](https://hackmd.io/_uploads/SJHkLxUO0.png)  
+
+5. 二分圖
+可以將這張圖的頂點分為兩個集合  
+滿足所有邊的兩個頂點都在不同集合  
+![截圖 2024-07-18 上午9.57.23](https://hackmd.io/_uploads/Bk_9LgIOA.png)  
+
 
