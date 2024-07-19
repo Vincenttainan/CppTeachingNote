@@ -113,7 +113,7 @@
 加邊時間複雜度 $O(logV)$ , 刪邊時間複雜度 $O(logV)$  
 
 ### 實作  
-```cpp=
+```cpp
 int n,m;
 vector<int>G[N];
 
