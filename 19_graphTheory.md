@@ -135,7 +135,7 @@ int main(){
 * DFS (深度優先搜索)  
 * BFS (廣度優先搜索)  
 
-![截圖 2024-07-19 上午9.39.23](https://hackmd.io/_uploads/r1G1VHwuR.png)  
+<img width="660" alt="截圖 2024-07-19 上午9 39 23" src="https://github.com/user-attachments/assets/135a9e4f-f8cd-4219-a2ff-5ae60479257a">  
 
 ### DFS  
 如同走迷宮，找到一條新路就一路走下去，當沒路時則原路返回  
