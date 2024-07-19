@@ -127,3 +127,38 @@ int main(){
 	return 0;
 }
 ```
+
+---
+
+## 遍歷  
+
+* DFS (深度優先搜索)  
+* BFS (廣度優先搜索)  
+
+![截圖 2024-07-19 上午9.39.23](https://hackmd.io/_uploads/r1G1VHwuR.png)  
+
+### DFS  
+如同走迷宮，找到一條新路就一路走下去，當沒路時則原路返回  
+所以只須紀錄這頂點是否有走過，每走到一個頂點就標記為走過  
+當發現點有標記過就不要再走，沒標記過就走下去  
+
+[DFS運作](https://www.youtube.com/watch?v=7fujbpJ0LB4&t=80)  
+
+特殊性質：之後會提到很多  
+
+### DFS 實作  
+通常以遞迴實作  
+除非有題目卡 overflow ，再改用 stack  
+```cpp
+void dfs(int p){
+    vis[p]=1;
+    for(auto i:G[p]){
+        if(!vis[i]){
+            dfs(i);
+        }
+    }
+}
+```
+
+
+
