@@ -160,5 +160,35 @@ void dfs(int p){
 }
 ```
 
+### BFS  
+一口氣把可以走的路都放進清單中  
+再一條一條慢慢拿出來走  
+跟DFS一樣標記每個點是否走過  
+如果走過就不用再放進清單內了  
+
+[BFS運作](https://www.youtube.com/watch?v=oDqjPvD54Ss&t=90s)  
+
+特殊性質 : 可以發現若邊不帶權，走到的路徑長度會是最短路徑  
+
+### BFS 實作  
+通常以 queue 做為清單來實作  
+```cpp
+void bfs(int u){
+    queue<int>q;
+    q.push(u);
+    vis[u]=1;
+    while(!q.empty()){
+        int v=q.front();
+        q.pop();
+        for(auto i:G[v]){
+            if(!vis[i]){
+                vis[i]=vis[v]+1;
+                q.push(i);
+                q.pop();
+            }
+        }
+    }
+}
+```
 
 
