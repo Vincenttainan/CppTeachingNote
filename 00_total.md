@@ -59,7 +59,9 @@
 
 ## 圖論  
 * [Graph TheoryI](https://github.com/Vincenttainan/CppTeachingNote/blob/main/19_graphTheoryI.md)
-* [Graph TheoryII]()  
+* [Graph TheoryII]()
+
+## 資料結構  
 * [Data Structure]()  
 * [Tree]()  
 * [Divide]()  
