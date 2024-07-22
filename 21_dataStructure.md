@@ -87,3 +87,20 @@ $A_i = A_{i-1} + D_i$
 
 我們稱 $D$ 陣列是 $A$ 陣列的差分  
 
+> ### ex4. 二為前綴和  
+> 給定一個大小為 $n \times n$ 的表格，有些格子上有樹  
+> $q$ 筆詢問 $(x1, y1)$ 到 $(x2, y2)$ 之間有多少樹  
+> $1 \leq n \leq 1000; 1 \leq q \leq 2 \times 10^5$  
+
+同樣的，如果我們想用一樣的技巧，就會有  
+$S_{I,J}=\Sigma^{I}_{i=0} \Sigma^{J}_{j=0}A_{i,j}$  
+
+<img width="649" alt="2dprefix_0" src="https://github.com/user-attachments/assets/0daf0fb4-c832-4b37-b5d8-3185ab32478d">  
+
+$S_{i,j}=A_{i,j}+S_{i-1,j}+S_{i,j-1}-S_{i-1,j-1}$  
+
+查詢？  
+
+<img width="682" alt="2dprefix_1" src="https://github.com/user-attachments/assets/408be2ef-45f7-4e75-b7ff-e55b1f2c1fae">  
+
+$\Sigma^{x_2}_{i=x_1}\Sigma^{y_2}_{j=y_1}A_{i,j}=S_{x_2,y_2}-S_{x_1-1,y_2}-S_{x_2,y_1-1}+S_{x_1-1,y_1-1}$  
