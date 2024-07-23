@@ -104,3 +104,7 @@ $S_{i,j}=A_{i,j}+S_{i-1,j}+S_{i,j-1}-S_{i-1,j-1}$
 <img width="682" alt="2dprefix_1" src="https://github.com/user-attachments/assets/408be2ef-45f7-4e75-b7ff-e55b1f2c1fae">  
 
 $\Sigma^{x_2}_{i=x_1}\Sigma^{y_2}_{j=y_1}A_{i,j}=S_{x_2,y_2}-S_{x_1-1,y_2}-S_{x_2,y_1-1}+S_{x_1-1,y_1-1}$  
+
+也就是說，這題可以單純使用前綴和在 $O(n^2 + q)$ 的時間內解決  
+
+實際上前綴和跟差分的技巧可以推廣到任意 $D$ 維,但查詢跟建構的時間就需要多乘上 $2^D$  
