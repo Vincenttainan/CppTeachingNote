@@ -396,6 +396,61 @@ c4 --> d8
 
 一個最直接的方法，是使用**指標**的宣告：  
 
+```cpp
+struct SegmentTree{
+    int val, L, R;
+    SegmentTree *left, *right;
+    SegmentTree() : left(nullptr), right(nullptr){};
+    SegmentTree(int val, int L, int R) : val(val), L(L), R(R),
+    left(nullptr), right(nullptr)
+} root;
+
+int N, Q, arr[500005];
+
+SegmentTree *build(int L, int R){
+    SegmentTree *seg = new SegmentTree(arr[L], L, R);
+    if (L != R){
+        int mid = (L + R) / 2;
+        seg->left = build(L, mid);
+        seg->right = build(mid + 1, R);
+        seg->val = seg->left->val + seg->right->val;
+    }
+    return seg;
+}
+
+void modify(SegmentTree *root, int pos, int val){
+    if (root->L != root->R){
+        int mid = (root->L + root->R) / 2;
+        if(pos <= mid){
+            modify(root->left, pos, val);
+        }
+        else{
+            modify(root->right, pos, val);
+        }
+        root->val = root->left->val + root->right->val;
+    }
+    else{
+        root->val = val;
+    }
+}
+
+int query(SegmentTree *root, int L, int R){
+    if(L <= root->L && root->R <= R){
+        return root->val;
+    }
+    else if(R < root->L || root->R < L){
+        return 0;
+    }
+    else{
+        return query(root->left, L, R) + query(root->right, L, R);
+    }
+}
+```
+
+雖然指標線段樹的寫法很直覺，但這種實作方式的常數跟記憶體空間都比較大  
+但在未來遇到線段樹的變體的時候，不妨嘗試這種方法，實作起來相當直覺  
+
+
 
 
 
