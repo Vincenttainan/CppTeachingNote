@@ -479,6 +479,124 @@ int query(SegmentTree *root, int L, int R){
 
 如果這樣編號的話會省下一半的記憶體  
 
+> ### ex.7 區間和、區間改值  
+> 給定一個長度為 $N$ 的陣列 $A$ ，接下來有 $Q$ 筆操作  
+> 1. $L \  R \  C$ ：把 $A_L, A_{L+1}, \cdots, A_R$ 的值加上 $C$  
+> 2. $L \  R$ ：回答 $A_L + A_{L+1} + \cdots + A_R$  
+> 
+> $1 \leq N, Q \leq 5 \times 10^5$  
+
+還記得我們在分塊裡面是怎麼做的嗎？  
+要怎麼推廣？  
+
+對於每個節點，額外紀錄一項資訊 $lazy_i$ ：  
+這個節點總共全部被加了多少，而且我們偷懶還沒有處理  
+
+當我們需要取這個節點的值的時候，就需要把 $lazy_i(R - L + 1)$ 補上答案  
+而當我們需要造訪這個節點的子孫的時候，就需要把這個節點上偷懶的東西下推下去  
+
+這種 $lazy$ 我們稱之為 **懶標（懶人標記）**  
+
+```mermaid
+flowchart TD
+a1(58)
+b1(38)
+b2(20)
+c1(15)
+c2(9)
+c3(13)
+c4(7)
+d1(5)
+d2(3)
+d3(1)
+d4(8)
+d5(9)
+d6(4)
+d7(0)
+d8(7)
+a1 --> b1 --> c1 --> d1
+c1 --> d2
+b1 --> c2 --> d3
+c2 --> d4
+a1 --> b2 --> c3 --> d5
+c3 --> d6
+b2 --> c4 --> d7
+c4 --> d8
+```
+
+```mermaid
+flowchart TD
+a1(58)
+b1(38)
+b2(20)
+c1(15)
+c2(9)
+c3(13)
+c4(7)
+d1(5)
+d2(3)
+d3(1)
+d4(8)
+d5(9)
+d6(4)
+d7(0)
+d8(7)
+a1 --> b1 --> c1 --> d1
+subgraph add 4 times
+    b2 --> c3 --> d5
+    c3 --> d6
+    b2 --> c4 --> d7
+    c4 --> d8
+end
+subgraph add 2 times
+    c2 --> d3
+    c2 --> d4
+end
+subgraph add 1 time
+    d2
+end
+c1 --> d2
+b1 --> c2
+a1 --> b2 
+```
+
+```mermaid
+flowchart TD
+a1(58)
+b1(38)
+b2{20+7}
+c1(15)
+c2{9+7}
+c3(13)
+c4(7)
+d1(5)
+d2{3+7}
+d3(1)
+d4(8)
+d5(9)
+d6(4)
+d7(0)
+d8(7)
+a1 --> b1 --> c1 --> d1
+b2 --> c3 --> d5
+c3 --> d6
+b2 --> c4 --> d7
+c4 --> d8
+c2 --> d3
+c2 --> d4
+c1 --> d2
+b1 --> c2
+a1 --> b2 
+subgraph lazy tag 1
+    d2
+end
+subgraph lazy tag 2
+    c2
+end
+subgraph lazy tag 3
+    b2
+end
+```
 
 
 
