@@ -608,7 +608,7 @@ BIT 想解決的是動態前綴和的問題
 
 而這棵樹的維護方法則是：假設 $i$ 在二進位下的最低位數是 $lowbit$ ，那這個節點就維護他往前 $2^{lowbit}$ 的長度  
 
-![bits](https://hackmd.io/_uploads/BkjDnYgYC.png)  
+<img width="386" alt="bits" src="https://github.com/user-attachments/assets/92bd944a-0a1d-4d4a-abb4-019eac40b1a1">  
 
 這時候我們就會有很多性質了：  
 
