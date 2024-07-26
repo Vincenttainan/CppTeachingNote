@@ -598,6 +598,21 @@ subgraph lazy tag 3
 end
 ```
 
+---
+
+## 6. BIT  
+
+BIT 的全名是 Binary Indexed Tree，又稱 Fenwick Tree，中文翻譯為樹狀數組  
+
+BIT 想解決的是動態前綴和的問題  
+
+而這棵樹的維護方法則是：假設 $i$ 在二進位下的最低位數是 $lowbit$ ，那這個節點就維護他往前 $2^{lowbit}$ 的長度  
+
+![bits](https://hackmd.io/_uploads/BkjDnYgYC.png)  
+
+這時候我們就會有很多性質了：  
+
+
 
 
 
