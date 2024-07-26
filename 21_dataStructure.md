@@ -625,5 +625,51 @@ $i, i + 2^{lowbit}, i + 2^{lowbit} + 2^{lowbit(i+2^{lowbit})}, \cdots$
 理由是因為， $-i$ 的二進位會是 $11111 \cdots 11 - (i - 1)$  
 所以在 $lowbit$ 以下的位數會長成 $100 \cdots 0$ AND $100 \cdots 0$  
 
+$O(N)$ 建構  
+
+```cpp
+void build(int pos, ll val){
+    for (int i = 1; i <= N; i++){
+        bit[i] += arr[i];
+        if(i + (i & -i) <= N){
+            bit[i + (i & -i)] += bit[i];
+        }
+    }
+}
+
+void modify(int pos, ll val){
+    for (int i = pos; i <= N; i += (i & -i)){
+        bit[i] += val;
+    }
+}
+
+long long query(int pos){
+    long long ans = 0;
+    for (int i = pos; i > 0; i -= (i & -i)){
+        ans += bit[i];
+    }
+    return ans;
+}
+```
+
+> ### ex.8.0 區間和、單點加值  
+> 給定一個長度為 $N$ 的陣列 $A$ ，接下來有 $Q$ 筆操作  
+> 1. $i \  k$ ：把 $A_i$ 的值加上 $k$  
+> 2. $L \  R$ ：回答 $A_L + A_{L+1} + \cdots + A_R$  
+> 
+> $1 \leq N, Q \leq 5 \times 10^5$  
+
+這時候這題就可以使用 BIT 輕鬆解決，相對於線段樹而言，BIT具有實作簡單跟常數極小的優勢  
+
+> ### ex.8.1 區間改值、單點查詢  
+> 給定一個長度為 $N$ 的陣列 $A$ ，接下來有 $Q$ 筆操作  
+> 1. $L \  R \  k$ ：把 $A_L, A_{L + 1}, \cdots , A_R$ 的值都加上 $k$  
+> 2. $i$ ：回答 $A_i$  
+>
+> $1 \leq N, Q \leq 5 \times 10^5$
+
+還記得差分可以把區間加值轉成兩個單點修改，單點查詢變成前綴查詢嗎？  
+
+這樣這題就可以快速的在 $O(Q log N)$ 的時間內完成，同時常數跟實作難度都比線段樹低很多  
 
 
