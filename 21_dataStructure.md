@@ -612,8 +612,18 @@ BIT 想解決的是動態前綴和的問題
 
 這時候我們就會有很多性質了：  
 
+1. 總共的空間只有 $N$  
+2. 單點查詢： $query(i) = bit_i + query(i - 2^{lowbit})$  
+3. 單點修改：會涵蓋到 $i$ 的人會是  
+$i, i + 2^{lowbit}, i + 2^{lowbit} + 2^{lowbit(i+2^{lowbit})}, \cdots$  
 
+同時我們發現，其實 BIT 很像砍掉右小孩的線段樹  
 
+> ### 引理  
+> $i$ 的 $2^{lowbit}$ 就是 $i$ AND $-i$  
+
+理由是因為， $-i$ 的二進位會是 $11111 \cdots 11 - (i - 1)$  
+所以在 $lowbit$ 以下的位數會長成 $100 \cdots 0$ AND $100 \cdots 0$  
 
 
 
