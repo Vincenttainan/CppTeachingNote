@@ -112,3 +112,63 @@ int main(){
 }
 ```
 
+### 完整程式碼  
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+queue<pair<int,int> > q;
+pair<int,int> _p;
+int n,m;
+int dx[4]={1,-1,0,0};
+int dy[4]={0,0,1,-1};
+bool arr[1005][1005];
+int vis[1005][1005];
+int xme,yme,xdoor,ydoor;
+
+inline bool check(int x,int y){
+	if(x>=0&&x<n&&y>=0&&y<m&&arr[x][y]==0&&vis[x][y]==0){
+		return 1;
+	}
+	else{
+		return 0;
+	}
+}
+
+inline void bfs(int x,int y){
+	while(!q.empty()){
+	    _p=q.front();
+		int nowx=_p.first;
+		int nowy=_p.second;
+		q.pop();
+		for(int i=0;i<4;i++){
+			int todox=nowx+dx[i];
+			int todoy=nowy+dy[i];
+			if(check(todox,todoy)){
+			    _p.first=todox;
+			    _p.second=todoy;
+				q.push(_p);
+				vis[todox][todoy]=vis[nowx][nowy]+1;
+			}
+		}
+	}
+}
+
+int main(){
+	cin>>n>>m;
+	for(int i=0;i<n;i++){
+		for(int j=0;j<m;j++){
+			cin>>arr[i][j];
+		}
+	}
+	cin>>xme>>yme>>xdoor>>ydoor;
+	_p.first=xme;
+	_p.second=yme;
+	q.push(_p);
+	vis[xme][yme]=1;
+	bfs(xme,yme);
+	cout<<vis[xdoor][ydoor]-1<<endl;
+}
+```
+
+---
