@@ -115,6 +115,58 @@ void dfs(int x,int y){
 
 ```
 
+### 完整程式碼  
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int n,m,xdoor,ydoor;
+bool arr[1005][1005];
+bool vis[1005][1005];
+int dx[4]={0,1,0,-1};
+int dy[4]={1,0,-1,0};
+bool ans=0;
+
+bool check(int x,int y){
+	if(x>=1&&x<=n&&y>=1&&y<=m&&arr[x][y]==0&&vis[x][y]==0){
+		return 1;
+	}
+	return 0;
+}
+
+void dfs(int x,int y){
+	vis[x][y]=1;
+	if(x==xdoor&&y==ydoor){
+		ans=1;
+	}
+	for(int i=0;i<4;i++){
+		int nextx=x+dx[i];
+		int nexty=y+dy[i];
+		if(check(nextx,nexty)){
+			dfs(nextx,nexty);
+		}
+	}
+}
+
+int main() {
+    ios::sync_with_stdio(0),cin.tie(0);
+	int xme,yme,t;
+	cin>>n>>m>>xme>>yme>>xdoor>>ydoor>>t;
+	int x,y;
+	while(t--){
+		cin>>x>>y;
+		arr[x][y]=1;
+	}
+	dfs(xme,yme);
+	if(ans==0){
+		cout<<"Harakiri!"<<endl;
+	}
+	else{
+		cout<<"Cool!"<<endl;
+	}
+}
+```
+
 ---
 
 > ### [閹割版本 BFS ( TOJ 44 )](https://toj.tfcis.org/oj/pro/44/)  
