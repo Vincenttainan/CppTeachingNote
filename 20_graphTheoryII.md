@@ -1,7 +1,7 @@
 # **C++ 筆記**  
 ## 圖論 Graph Theory II  
 
-> ### [閹割版本 DFS ( TOJ 432 )](https://toj.tfcis.org/oj/pro/432/)  
+### [閹割版本 DFS ( TOJ 432 )](https://toj.tfcis.org/oj/pro/432/)  
 > ### 輸入說明  
 > 第 $1$ 行有兩個正整數 $N,M$ ，表示將 $N \times M$ 的棋盤  
 > 第 $2$ 行有兩個正整數 $(x_{me},y_{me})$ ，表示人所在的格子座標  
@@ -115,7 +115,7 @@ void dfs(int x,int y){
 
 ```
 
-### 完整程式碼  
+#### 完整程式碼  
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
@@ -169,7 +169,7 @@ int main() {
 
 ---
 
-> ### [閹割版本 BFS ( TOJ 44 )](https://toj.tfcis.org/oj/pro/44/)  
+### [閹割版本 BFS ( TOJ 44 )](https://toj.tfcis.org/oj/pro/44/)  
 > ### 輸入說明  
 > 輸入第一行 $N, M$  (N, M≤ 1000)
 > 接著有 $N$ 行，每行 $M$ 個 $0$ 或 $1$ 字元，表迷宮狀態  
@@ -282,7 +282,7 @@ int main(){
 }
 ```
 
-### 完整程式碼  
+#### 完整程式碼  
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
