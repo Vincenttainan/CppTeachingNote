@@ -61,6 +61,60 @@
 > | **3** | 火  | 火  | 空  | 空  | 空  |
 > | **4** | 人  | 火  | 空  | 空  | 空  |
 
+先把所有的輸入存起來  
+```cpp
+int n,m,xdoor,ydoor;
+bool arr[1005][1005];
+
+int main() {
+	int xme,yme,t;
+	cin>>n>>m>>xme>>yme>>xdoor>>ydoor>>t;
+	int x,y;
+	while(t--){
+		cin>>x>>y;
+		arr[x][y]=1;
+	}
+
+}
+```
+
+因為是閹割版的 bfs ，所以只需考慮要向 **上下左右** 走就可以了  
+```cpp
+int dx[4]={0,1,0,-1};
+int dy[4]={1,0,-1,0};
+```
+
+還有因為將地圖是唯一格一格的，所以只要檢查當前的那格有沒有走過，和走訪是否合法就可以了  
+```cpp
+int vis[1005][1005];
+
+bool check(int x,int y){
+	if(x>=1&&x<=n&&y>=1&&y<=m&&arr[x][y]==0&&vis[x][y]==0){
+		return 1;
+	}
+	return 0;
+}
+
+```
+
+接下來，因為題目只是問 **能否** 抵達位置，所以用 dfs 來實作就可以了  
+```cpp
+void dfs(int x,int y){
+	vis[x][y]=1;
+	if(x==xdoor&&y==ydoor){
+		ans=1;
+	}
+	for(int i=0;i<4;i++){
+		int nextx=x+dx[i];
+		int nexty=y+dy[i];
+		if(check(nextx,nexty)){
+			dfs(nextx,nexty);
+		}
+	}
+}
+
+```
+
 ---
 
 > ### [閹割版本 BFS ( TOJ 44 )](https://toj.tfcis.org/oj/pro/44/)  
