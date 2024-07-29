@@ -63,5 +63,3 @@
 
 ## 資料結構  
 * [Data Structure]()  
-* [Tree]()  
-* [Divide]()  
