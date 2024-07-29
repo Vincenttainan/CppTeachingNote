@@ -48,18 +48,18 @@
 * [Standard Template Library](https://github.com/Vincenttainan/CppTeachingNote/blob/main/14_standardTemplateLibrary.md)  
 
 ## 排序  
-* [Sort](https://github.com/Vincenttainan/CppTeachingNote/blob/main/15_sort.md)
+* [Sort](https://github.com/Vincenttainan/CppTeachingNote/blob/main/15_sort.md)  
 
 ## 貪婪法  
-* [Greedy](https://github.com/Vincenttainan/CppTeachingNote/blob/main/16_greedy.md)
+* [Greedy](https://github.com/Vincenttainan/CppTeachingNote/blob/main/16_greedy.md)  
 
 ## DP  
-* [Dynamic Programming I](https://github.com/Vincenttainan/CppTeachingNote/blob/main/17_dpI.md)
-* [Dynamic Programming II](https://github.com/Vincenttainan/CppTeachingNote/blob/main/18_dpII.md)
+* [Dynamic Programming I](https://github.com/Vincenttainan/CppTeachingNote/blob/main/17_dpI.md)  
+* [Dynamic Programming II](https://github.com/Vincenttainan/CppTeachingNote/blob/main/18_dpII.md)  
 
 ## 圖論  
-* [Graph TheoryI](https://github.com/Vincenttainan/CppTeachingNote/blob/main/19_graphTheoryI.md)
-* [Graph TheoryII]()
+* [Graph TheoryI](https://github.com/Vincenttainan/CppTeachingNote/blob/main/19_graphTheoryI.md)  
+* [Graph TheoryII](https://github.com/Vincenttainan/CppTeachingNote/blob/main/20_graphTheoryII.md)  
 
 ## 資料結構  
-* [Data Structure]()  
+* [Data Structure](https://github.com/Vincenttainan/CppTeachingNote/blob/main/21_dataStructure.md)  
