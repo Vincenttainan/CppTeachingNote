@@ -11,3 +11,8 @@ aaa
 test
 
 </details>
+
+```mermaid
+flowchart TD
+a-->b-->c
+```
