@@ -1,0 +1,112 @@
+### [3 / GCD](https://toj.tfcis.org/oj/pro/3/)  
+
+<details>
+
+<summary>題目</summary>
+
+### 題目敘述  
+求兩數之最大公因數(GCD) 
+    
+### 輸入說明  
+第一個整數 $T$ ，代表測資數  
+接下來有 $T$ 行，每行有兩個整數 $a,b$  
+    
+### 輸出說明  
+輸出每個 $a,b$ 的最大公因數  
+    
+### 輸入限制  
+$1 \leq T \leq 1000$  
+$0 \leq a,b \leq 2,147,483,647$  
+    
+### 範例輸入
+```
+4
+10 2
+3 1
+5 7
+20 12
+```
+
+### 範例輸出
+```
+2
+1
+1
+4
+```
+
+</details>
+
+<details>
+
+<summary>題解</summary>
+
+首先先按照國中所教的  
+最大公因數就是， 能够整除 $a,b$ 的最大正整數  
+因此可以從 $a,b$ 內較小的數開始遞減  
+直到找到能够整除 $a,b$ 的最大正整數為止  
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n,a,b;
+    cin>>n;
+    while(n--){
+        cin>>a>>b;
+        for(int i=min(a,b); i>0; i--){
+            if(a%i==0 && b%i==0){
+                cout<<i<<endl;
+                break;
+            }
+        }
+    }
+}
+```
+然後就 TLE 了，只好來優化算法  
+
+國中教的最大公因數求法出了短除法外，還有
+**輾轉相除法**  
+
+稍稍修改一下成為**輾轉相除法**的程式碼  
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,a,b,temp;
+    cin>>n;
+    while(n--){
+        cin>>a>>b;
+        while(b!=0){
+            temp=b;
+            b=a%b;
+            a=temp;
+        }
+        cout<<a<<'\n';
+    }
+}
+```
+好了 AC 了  
+
+</details>
+
+<details>
+
+<summary>AC code</summary>
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,a,b,temp;
+    cin>>n;
+    while(n--){
+        cin>>a>>b;
+        cout<<__gcd(a,b)<<'\n';
+    }
+}
+```
+
+</details>
