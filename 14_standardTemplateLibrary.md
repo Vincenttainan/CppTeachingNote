@@ -184,7 +184,7 @@ stack 完整宣告應該長得像這樣
 stack<_Tp, _Sequence =deque<_Tp>>;
 ```
 * _Tp 是裡面要裝什麼東西  
-* _Sequence 則是我們要用什麼東西裝，預設是 deque，但你可以發現其實 vector 也可以做一樣的是，所以也可以像是  
+* _Sequence 則是我們要用什麼東西裝，預設是 deque，但你可以發現其實 vector 也可以做一樣的事，所以也可以像是  
 ```cpp
 stack<int, vector<int>> st;
 ```
