@@ -20,7 +20,7 @@ Tainan
 * 短字串可以用一對單引號或是一對雙引號所組成  
 * 長字串可以用一對三個單引號所組成  
 
-### index  
+## index  
 
 字串支援索引 `index` 來輔助存取字元  
 
@@ -32,7 +32,7 @@ Example:
 | Index from head | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 |
 | Index from tail | -13 | -12 | -11 | -10 | -9 | -8 | -7 | -6 | -5 | -4 | -3 | -2 | -1 |
 
-### slicing  
+## slicing  
 
 字串支援切割 `slicing` 來輔助存取字元  
 
@@ -49,7 +49,7 @@ Example:
 `s[2:-2:2]` = `netan`  
 `s[::-1]` = `naniattnecniV`  
 
-### connecting  
+## connecting  
 
 字串連結、字串重複  
 
@@ -62,7 +62,7 @@ s4 = s1+s2*2
 # s4 = "Vincenttainantainan"
 ```
 
-### function  
+## function  
 
 * len(s)  
 回傳字串 `s` 的長度  
