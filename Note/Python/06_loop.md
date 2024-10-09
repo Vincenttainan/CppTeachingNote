@@ -1,5 +1,5 @@
 # **Pyhton 筆記**  
-## 迴圈 loop  
+## 迴圈 Loop  
 
 # for loop  
 ## 基本架構  
