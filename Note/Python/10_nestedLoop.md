@@ -1,5 +1,5 @@
 # **Pyhton 筆記**  
-## 巢狀迴圈 nested loop  
+## 巢狀迴圈 Nested Loop  
 
 # 基本架構  
 
