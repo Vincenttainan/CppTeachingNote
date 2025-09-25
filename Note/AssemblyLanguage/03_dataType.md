@@ -3,6 +3,31 @@
 
 ---
 
+### 宣告方式：  
+
+一般變數  
+
+```
+[變數名稱] [資料型態] [初始值]
+```
+
+陣列  
+
+```
+[陣列名稱] [資料型態] [初始化]
+```
+
+小範例  
+
+```ams
+.data
+    myByte   BYTE   10                ; 單一 Byte
+    myWord   WORD   1234h             ; 單一 Word
+    myArr    BYTE   4 DUP(0)          ; 4 個 Byte 陣列
+    myStr    BYTE   "Assembly!",0     ; 字串，結尾為 0
+    myNum    DWORD  12345678h         ; 32-bit 整數
+```
+
 ### 整數部分  
 
 | 關鍵字 |     大小      | 範圍 (Unsigned) |     範圍 (Signed, 二補數)     |              說明              |
