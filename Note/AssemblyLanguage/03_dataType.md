@@ -19,7 +19,7 @@
 
 小範例  
 
-```ams
+```asm
 .data
     myByte   BYTE   10                ; 單一 Byte
     myWord   WORD   1234h             ; 單一 Word
