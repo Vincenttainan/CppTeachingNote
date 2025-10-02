@@ -1,5 +1,5 @@
 # **Assembly Language筆記**  
-## 比較與跳躍 conditionalControlFlow  
+## 比較跳躍與迴圈 conditionalControlFlowAndLoop  
 
 ---
 
@@ -90,3 +90,37 @@ while_start:
 while_end:
 ```
 
+## LOOP 指令  
+
+```asm
+label:
+    ; command
+    LOOP label
+```
+
+功能：自動遞減 CX 暫存器，如果 CX != 0，則跳到指定標籤  
+
+動作：  
+1. CX = CX – 1  
+2. 如果 CX != 0，跳到 label；否則繼續往下執行  
+
+常用於迴圈控制，必須先設定 CX = 次數  
+
+範例：重複加總 10 次  
+
+```asm
+MOV CX, 10        ; 設定迴圈次數
+MOV AX, 0
+MOV BX, 1
+
+LOOP_START:
+    ADD AX, BX    ; AX = AX + BX
+    INC BX        ; BX++
+    LOOP LOOP_START
+```
+
+| counter |  i  | ii  | iii | iv  |  v  | vi  | vii | iix | ix  |  x  | xi  |
+|:-------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **AX**  |  0  |  1  |  3  |  6  | 10  | 15  | 21  | 28  | 36  | 45  | 55  |
+| **BX**  |  1  |  2  |  3  |  4  |  5  |  6  |  7  |  8  |  9  | 10  | 11  |
+| **CX**  | 10  |  9  |  8  |  7  |  6  |  5  |  4  |  3  |  2  |  1  |  0  |
