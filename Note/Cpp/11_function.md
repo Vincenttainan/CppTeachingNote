@@ -119,7 +119,7 @@ int get_abs(int x){
 void my_swap(int a, int b){
     int tmp=a;
     a=b;
-    b=a;
+    b=temp;
 }
 ```
 
